@@ -1,0 +1,90 @@
+body{
+    height: 100%;
+    margin: 0;
+    background-color: #3F3351;
+    background-repeat: no-repeat;
+    font-size: 18px;
+    letter-spacing: .5px;
+    font-weight: 400;
+    color: #f5ecee;
+}
+
+#wrapper{
+    width: 100%;
+    height: 100%;
+    display:flex;
+    align-items: center;
+    justify-content: center; /*Centers content*/
+}
+
+/* Makes it so text doesn't too long and unreadable*/
+form {
+    max-width: 600px;
+    height: 400px;
+    padding: 2em;
+}
+
+form p{
+    margin-bottom: 18px;
+    font-size: 1.175em;
+    line-height: 32px;
+}
+
+form fieldset{
+    margin-bottom: 28px;
+    padding: 0;
+    border: none; /*Erasing default settings*/
+}
+
+form a.continue {
+    font-size: 1.3em;
+    background-color: #E9A6A6;
+    color: aliceblue;
+    padding: .5em 1em;
+    text-decoration: none;/*erase underline from link*/
+    float: right; 
+}
+
+form a.continue:hover,
+form a.continue:focus{
+    background-color: antiquewhite;
+    color: beige;
+}
+
+button.reset{
+    background-color: transparent;
+    border: none;
+    color:#f5ecee;
+    letter-spacing: .5px;
+
+}
+
+button.reset:hover{
+    color: black;
+}
+
+form label span { /*Targets form, then label in the form, then adjusts the span (look) of the label*/
+    display: block; /*Takes up the whole space, is next to nothing*/
+    box-sizing: border-box;
+    margin-bottom: 8px;
+    padding: 14px 12px;
+    border: 4px solid #f5ecee;
+    border-radius: 25px; /*Bubbles or rounds out when shown*/
+}
+
+form label:hover span, form label:focus span{ /*changes what it looks like when hovered over & when focused*/
+    border: 2px solid #E9A6A6;
+    background-color: pink;
+    color: black;
+}
+
+form input[type=radio]{ /*Targets the radio (selectable options)*/
+    visibility: hidden;
+}
+
+form input[type=radio]:checked +span{ /*When it is checked, the span will look like other inputs. Otherwise it will change when checked*/
+    border: 2px solid #E9A6A6;
+    background-color: #f5ecee;
+    color: black;
+
+}
